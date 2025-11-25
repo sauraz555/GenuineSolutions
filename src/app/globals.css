@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 17% 94%;
+    --foreground: 215 25% 27%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    --primary: 145 50% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 100% 37%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 215 25% 27%;
+    --destructive: 13 68% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 145 50% 36%;
+    --radius: 1rem;
+    --chart-1: 145 50% 36%;
+    --chart-2: 203 100% 37%;
+    --chart-3: 45 100% 50%;
+    --chart-4: 13 68% 50%;
+    --chart-5: 215 25% 27%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 145 50% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 100% 37%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 13 68% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 145 50% 36%;
+    --chart-1: 145 50% 36%;
+    --chart-2: 203 100% 37%;
+    --chart-3: 45 100% 50%;
+    --chart-4: 13 68% 50%;
+    --chart-5: 215 25% 27%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glassmorphism {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-eucalyptus {
+  background: linear-gradient(135deg, #2E8B57 0%, #3FA968 100%);
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, #0077BE 0%, #3396D1 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #2E8B57 0%, #0077BE 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #2E8B57 0%, #0077BE 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
